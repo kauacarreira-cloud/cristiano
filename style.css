@@ -140,66 +140,57 @@ body {
     object-fit: cover;
 }
 
-/* Display principal */
+/* Display principal com borda personalizada */
 .main-display {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 25px;
     padding: 20px;
-    border: 3px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.main-image-wrapper {
+    position: relative;
+    padding: 20px;
+}
+
+.main-image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #ff006e, #8338ec, #3a86ff, #ff006e);
+    border-radius: 50px;
+    padding: 4px;
+    z-index: 1;
+    animation: borderRotate 3s linear infinite;
+}
+
+@keyframes borderRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .main-image {
-    width: 400px;
-    height: 300px;
-    border-radius: 20px;
+    position: relative;
+    width: 500px;
+    height: 350px;
+    border-radius: 45px;
     overflow: hidden;
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .main-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-/* Painel de informações */
-.info-panel {
-    position: absolute;
-    top: 50%;
-    right: -300px;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 25px;
-    border-radius: 15px;
-    width: 280px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    opacity: 0;
-}
-
-.main-container:hover .info-panel {
-    right: 20px;
-    opacity: 1;
-}
-
-.info-panel h3 {
-    color: #ff006e;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.info-panel p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 8px;
+    border-radius: 45px;
 }
 
 /* Estatísticas flutuantes */
@@ -213,6 +204,176 @@ body {
     backdrop-filter: blur(10px);
     color: white;
     font-size: 12px;
+}
+
+/* Páginas overlay */
+.page-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.page-content {
+    background: linear-gradient(135deg, #d946ef, #a855f7, #8b5cf6);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.page-content h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos da página Sobre */
+.about-content {
+    display: flex;
+    gap: 30px;
+    color: white;
+}
+
+.about-image {
+    flex: 0 0 300px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: #ff006e;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.about-text h3 {
+    color: #ffdd00;
+    margin: 20px 0 10px;
+    font-size: 1.3em;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Estilos da página Estatísticas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 3em;
+    font-weight: bold;
+    color: #ffdd00;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stat-label {
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.achievements {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.achievements h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+.achievements-list {
+    display: grid;
+    gap: 15px;
+}
+
+.achievement {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1em;
+}
+
+.trophy {
+    font-size: 1.5em;
+    min-width: 40px;
 }
 
 /* Responsividade */
@@ -234,14 +395,25 @@ body {
     
     .main-image {
         width: 100%;
-        max-width: 350px;
-        height: 250px;
+        max-width: 400px;
+        height: 280px;
     }
     
-    .info-panel {
-        position: static;
-        transform: none;
-        opacity: 1;
-        margin-top: 20px;
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        flex: none;
+        align-self: center;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .page-content {
+        padding: 20px;
+        margin: 10px;
     }
 }

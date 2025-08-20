@@ -13,68 +13,148 @@
         <div class="inner-container">
             <div class="top-section">
                 <div class="profile-mini">
-                    <img src="al.jpeg" alt="CR7" id="topImage">
+                    <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=200&h=150&fit=crop&crop=face" alt="CR7" id="topImage">
                 </div>
                 <div class="action-buttons">
-                    <button class="btn" onclick="changeTheme()">Sobre</button>
-                    <button class="btn" onclick="showStats()">Estatísticas</button>
+                    <button class="btn" onclick="goToAbout()">Sobre</button>
+                    <button class="btn" onclick="goToStats()">Estatísticas</button>
                 </div>
             </div>
 
             <div class="main-section">
                 <div class="side-gallery">
-                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=400&h=300&fit=crop&crop=face')">
-                        <img src="bola de ouro.jpeg" alt="CR7 1">
+                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&h=400&fit=crop&crop=face')">
+                        <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=120&h=90&fit=crop&crop=face" alt="CR7 1">
                     </div>
-                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=400&h=300&fit=crop&crop=face')">
-                        <img src="cris.jpeg" alt="CR7 2">
+                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=600&h=400&fit=crop&crop=face')">
+                        <img src="https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=120&h=90&fit=crop&crop=face" alt="CR7 2">
                     </div>
-                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=300&fit=crop&crop=face')">
-                        <img src="cristian.jpeg" alt="CR7 3">
+                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&h=400&fit=crop&crop=face')">
+                        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=120&h=90&fit=crop&crop=face" alt="CR7 3">
                     </div>
-                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=400&h=300&fit=crop&crop=face')">
-                        <img src="cristiano.jpeg" alt="CR7 4">
+                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=600&h=400&fit=crop&crop=face')">
+                        <img src="https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=120&h=90&fit=crop&crop=face" alt="CR7 4">
                     </div>
                 </div>
 
                 <div class="main-display">
-                    <div class="main-image">
-                        <img src="dnv ele.jpeg" alt="Cristiano Ronaldo" id="mainImage">
+                    <div class="main-image-wrapper">
+                        <div class="main-image">
+                            <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&h=400&fit=crop&crop=face" alt="Cristiano Ronaldo" id="mainImage">
+                        </div>
                     </div>
                 </div>
 
                 <div class="side-gallery">
-                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop&crop=face')">
-                        <img src="mu.jpeg" alt="CR7 5">
+                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&h=400&fit=crop&crop=face')">
+                        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=120&h=90&fit=crop&crop=face" alt="CR7 5">
                     </div>
-                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=400&h=300&fit=crop&crop=face')">
-                        <img src="papai.jpeg" alt="CR7 6">
+                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&h=400&fit=crop&crop=face')">
+                        <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=120&h=90&fit=crop&crop=face" alt="CR7 6">
                     </div>
-                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=face')">
-                        <img src="papaicris.jpeg" alt="CR7 7">
+                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=face')">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=120&h=90&fit=crop&crop=face" alt="CR7 7">
                     </div>
-                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=400&h=300&fit=crop&crop=face')">
-                        <img src="sla.jpeg" alt="CR7 8">
+                    <div class="side-image" onclick="changeMainImage('https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=600&h=400&fit=crop&crop=face')">
+                        <img src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=120&h=90&fit=crop&crop=face" alt="CR7 8">
                     </div>
                 </div>
-            </div>
-
-            <div class="info-panel" id="infoPanel">
-                <h3>🏆 CRISTIANO RONALDO</h3>
-                <p><strong>Nome:</strong> Cristiano Ronaldo dos Santos Aveiro</p>
-                <p><strong>Idade:</strong> 39 anos</p>
-                <p><strong>Posição:</strong> Ponta/Centroavante</p>
-                <p><strong>Clube:</strong> Al Nassr FC</p>
-                <p><strong>País:</strong> Portugal 🇵🇹</p>
-                <p><strong>Gols na Carreira:</strong> 850+</p>
-                <p><strong>Ballon d'Or:</strong> 5x Vencedor</p>
-                <p><strong>Champions League:</strong> 5x Campeão</p>
             </div>
 
             <div class="floating-stats">
                 <strong>CR7 LEGACY</strong><br>
                 O Maior de Todos os Tempos<br>
                 🐐 GOAT
+            </div>
+        </div>
+    </div>
+
+    <!-- Página Sobre (inicialmente oculta) -->
+    <div class="page-overlay" id="aboutPage" style="display: none;">
+        <div class="page-content">
+            <button class="close-btn" onclick="closePage()">&times;</button>
+            <h1>⚽ SOBRE CRISTIANO RONALDO</h1>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=300&h=400&fit=crop&crop=face" alt="CR7">
+                </div>
+                <div class="about-text">
+                    <h2>O Fenômeno Português</h2>
+                    <p>Cristiano Ronaldo dos Santos Aveiro, nascido em 5 de fevereiro de 1985 na Madeira, Portugal, é amplamente considerado um dos maiores jogadores de futebol de todos os tempos.</p>
+                    
+                    <h3>Carreira nos Clubes</h3>
+                    <p>Sua jornada começou no Sporting CP, seguida por passagens históricas pelo Manchester United, Real Madrid, Juventus e atualmente Al Nassr FC na Arábia Saudita.</p>
+                    
+                    <h3>Seleção Portuguesa</h3>
+                    <p>Recordista de gols pela seleção portuguesa, com mais de 130 gols em mais de 200 jogos. Conquistou a Eurocopa 2016 e a Liga das Nações 2019.</p>
+                    
+                    <h3>Características</h3>
+                    <p>Conhecido por sua dedicação extrema, disciplina rigorosa, mentalidade vencedora e capacidade de decidir jogos importantes. Seu físico impressionante e longevidade na carreira são inspiração para atletas do mundo todo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Página Estatísticas (inicialmente oculta) -->
+    <div class="page-overlay" id="statsPage" style="display: none;">
+        <div class="page-content">
+            <button class="close-btn" onclick="closePage()">&times;</button>
+            <h1>📊 ESTATÍSTICAS DE CR7</h1>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">850+</div>
+                    <div class="stat-label">Gols na Carreira</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1100+</div>
+                    <div class="stat-label">Jogos Disputados</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Bolas de Ouro</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Champions League</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">35+</div>
+                    <div class="stat-label">Títulos Conquistados</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">130+</div>
+                    <div class="stat-label">Gols pela Seleção</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">60+</div>
+                    <div class="stat-label">Hat-tricks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">250+</div>
+                    <div class="stat-label">Assistências</div>
+                </div>
+            </div>
+            
+            <div class="achievements">
+                <h2>🏆 Principais Conquistas</h2>
+                <div class="achievements-list">
+                    <div class="achievement">
+                        <span class="trophy">🥇</span>
+                        <span>5x Bola de Ouro (2008, 2013, 2014, 2016, 2017)</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="trophy">🏆</span>
+                        <span>5x Liga dos Campeões</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="trophy">🎖️</span>
+                        <span>Eurocopa 2016 com Portugal</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="trophy">🥈</span>
+                        <span>Liga das Nações 2019</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
