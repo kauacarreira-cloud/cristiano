@@ -162,7 +162,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, #ff006e, #8338ec, #3a86ff, #ff006e);
+    background: #000000;
     border-radius: 50px;
     padding: 4px;
     z-index: 1;
