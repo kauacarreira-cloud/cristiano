@@ -39,11 +39,11 @@ document.addEventListener('keydown', function(e) {
 
 // Array com as imagens para rotação automática
 const images = [
-    'https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&h=400&fit=crop&crop=face',
-    'https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=600&h=400&fit=crop&crop=face',
-    'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&h=400&fit=crop&crop=face',
-    'https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=600&h=400&fit=crop&crop=face',
-    'https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&h=400&fit=crop&crop=face'
+    'al.jpeg',
+    'mu.jpeg',
+    'dnv ele.jpeg',
+    'cris.jpeg',
+    'bola de ouro.jpeg'
 ];
 
 // Variável para controlar a imagem atual
